@@ -1,0 +1,9 @@
+
+numpy==1.26.4
+pandas==2.3.1
+pytdc==1.0.0
+rdkit==2023.9.6
+tabpfn==2.1.0
+
+# OPTIONAL. Uncomment if you  want to use XGBoost as evaluation method
+# xgboost==3.0.3

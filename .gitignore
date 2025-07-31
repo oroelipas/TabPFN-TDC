@@ -1,0 +1,4 @@
+tabpfn_ckpts/
+__pycache__/
+data/
+env/
