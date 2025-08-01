@@ -57,7 +57,7 @@ benchmark_results = {
             'Chemprop': [0.860, 0.036],
             'Euclia ML model': [0.845, 0.003],
             'Basic ML': [0.818, 0.000],
-            'MolE': [0.654, 0.028]  # Extracted from the paper. No leaderboard submission
+            'MolE': [0.654, 0.028]
         }
     },
     'lipophilicity_astrazeneca': {
@@ -609,6 +609,14 @@ def format_results(results_dic):
     return {k: [format_result(v)] for k, v in results_dic.items()}
 
 
+def add_results_to_benchmark(benchmark, results_dict, method_name):
+    for dataset, results in results_dict.items():
+        if dataset not in benchmark:
+            benchmark[dataset] = {'leaderboard': {}}
+        benchmark[dataset]['leaderboard'][method_name] = results
+    return benchmark
+
+
 def get_leaderboard_position(results):
     """
     Get the leaderboard position of the results for each task.
@@ -685,7 +693,7 @@ def get_sota():
     return sota_dict
 
 
-def get_sota_df(format=True):
+def get_sota_df(benchmark_results, format=True):
     """
     Creates a DataFrame with SOTA results and description of each dataset: 
     It adds this columns:
