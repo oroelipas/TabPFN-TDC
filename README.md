@@ -1,5 +1,5 @@
 # TabPFN-TDC
-TabPFNv2 predicting absorption, distribution, metabolism, and excretion (ADMET) of Drugs in the Therapeutic Data Challenge (TDC).  
+TabPFNv2 predicting Absorption, Distribution, Metabolism, Excretion, and Toxicitys (ADMET) of Drugs in the Therapeutic Data Challenge (TDC).  
 
 This work make use of the [TabPFNv2📝](https://www.nature.com/articles/s41586-024-08328-6) tabular foundation model using the 217 RDKit molecular descriptors as features.
 
